@@ -16,7 +16,6 @@
 /**
  * External dependencies.
  */
-import { createContext } from 'use-context-selector';
 import React, {
   type PropsWithChildren,
   useEffect,
@@ -29,6 +28,8 @@ import { noop } from '@ps-analysis-tool/design-system';
 import {
   type TabCookies,
   type TabFrames,
+  useContextSelector,
+  createContext,
   ORPHANED_COOKIE_KEY,
   UNMAPPED_COOKIE_KEY,
 } from '@ps-analysis-tool/common';
@@ -36,7 +37,6 @@ import {
 /**
  * Internal dependencies.
  */
-import useContextSelector from '../../../../utils/useContextSelector';
 import { ALLOWED_NUMBER_OF_TABS } from '../../../../constants';
 import setDocumentCookies from '../../../../utils/setDocumentCookies';
 import isOnRWS from '../../../../contentScript/utils/isOnRWS';
